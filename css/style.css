@@ -46,6 +46,8 @@ section#score div {
      background-image: url('../images/coin.png');
      background-repeat: no-repeat;
      background-size: cover;
+
+     animation: pulse 500ms 0s infinite alternate;
 }
 
 section#over {
@@ -59,13 +61,27 @@ section#over {
      background-color: rgba(255, 255, 0, 0.75);
 }
 
-section#over p{
+section#over p:not(.points){
      display: inline-block;
      width: 100%;
      text-align: center;
-     font-size: 10px;
+     margin-top: 100px;
+     font-size: 40px;
      font-weight: bolder;
      color: brown;
+}
+
+#over p.points {
+     text-align: center;
+     margin-top: 20px;
+     font-size: 35px;
+     font-weight: bolder;
+     color: brown;
+}
+
+
+@keyframes pulse {
+     from{opacity: 0} to {opacity: 1}
 }
 
 .hide {

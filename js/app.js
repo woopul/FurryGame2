@@ -122,6 +122,7 @@ class Game {
             clearInterval(this.ticker);
             $('#board').addClass('hide');
             $('#over').removeClass('hide');
+            $('.points').text(`Your score: ${this.score}`)
         }
 
         if (this.getFurryIndex() === this.getCoinIndex()) {
